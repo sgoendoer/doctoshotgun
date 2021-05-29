@@ -226,7 +226,7 @@ class Doctolib(LoginBrowser):
                 
         #for center_id in [158431, 158434, 158437, 158435, 158436, 158433]:
         for center_id, place in [(158431, '1. Arena Berlin'), (158434, '2. Messe Berlin/ Halle 21'), (158437, '6. Erika-Heß-Eisstadion'), (158435, '5. Velodrom Berlin'), (158436, '3. Flughafen Berlin-Tegel/ Terminal C'), (158433, '4. Flughafen Tempelhof/ Hangar 4')]:
-        yield {
+            yield {
                 'city': 'Berlin',
                 'name_with_title': f'Impfzentrum {center_id}',
                 'url': f'/institut/berlin/ciz-berlin-berlin?pid=practice-{center_id}',
