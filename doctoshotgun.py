@@ -416,7 +416,7 @@ class Application:
         parser.add_argument('--pfizer', '-z', action='store_true', help='select only Pfizer vaccine')
         parser.add_argument('--moderna', '-m', action='store_true', help='select only Moderna vaccine')
         parser.add_argument('--patient', '-p', type=int, default=-1, help='give patient ID')
-        parser.add_argument('--time-window', '-t', type=int, default=7, help='set how many next days the script look for slots (default = 7)')
+        parser.add_argument('--time-window', '-t', type=int, default=30, help='set how many next days the script look for slots (default = 30)')
         parser.add_argument('--center', '-c', action='append', help='filter centers')
         parser.add_argument('city', help='city where to book')
         parser.add_argument('username', help='Doctolib username')
@@ -498,7 +498,7 @@ class Application:
 
                 sleep(5)
         except CityNotFound as e:
-            print('\n%s: City %s not found. For now Doctoshotgun works only in France.' % (colored('Error', 'red'), colored(e, 'yellow')))
+            print('\n%s: City %s not found. For now this version of Doctoshotgun works only in Berlin/Germany.' % (colored('Error', 'red'), colored(e, 'yellow')))
             return 1
 
         return 0
