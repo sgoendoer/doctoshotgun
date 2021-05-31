@@ -4,7 +4,35 @@ As I couldn't find any (publicly available) API description and/or documentation
 
 JSON Schemas are automatically created via https://www.liquid-technologies.com/online-json-to-schema-converter
 
-### /account/master_patients.json
+### POST /login
+
+#### Description:
+
+Send login information
+
+#### JSON Schema:
+
+```
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": { 
+    "username": { "type": "string" }, 
+    "remember": { "type": "boolean" }, 
+    "remember_username": { "type": "boolean" }, 
+    "password": { "type": "string" }, 
+    "kind": { "type": "string" }
+  },
+  "required": [ "username", "remember", "remember_username", "password", "kind" ]
+}
+```
+
+#### Example:
+````
+{"username":"john.doe@gmail.com","remember":true,"remember_username":true,"password":"s3cret","kind":"patient"}
+````
+
+### GET /account/master_patients.json
 
 #### Description
 
