@@ -4,11 +4,15 @@ As I couldn't find any (publicly available) API description and/or documentation
 
 JSON Schemas are automatically created via https://www.liquid-technologies.com/online-json-to-schema-converter
 
-### POST /login
+## POST /login
 
-#### Description:
+### Description:
 
 Send login information
+
+### Request
+
+### Response
 
 #### JSON Schema:
 
@@ -32,13 +36,17 @@ Send login information
 {"username":"john.doe@gmail.com","remember":true,"remember_username":true,"password":"s3cret","kind":"patient"}
 ````
 
-### GET /account/master_patients.json
+## GET /account/master_patients.json
 
-#### Description
+### Description
 
 Get info for the logged in user
 
-#### JSON Schema:
+### Request
+
+### Response
+
+##### JSON Schema:
 
 ```
 {
