@@ -503,7 +503,7 @@ class Application:
 
                     sleep(1)
 
-                sleep(10)
+                sleep(15)
         except CityNotFound as e:
             print('\n%s: City %s not found. For now this version of Doctoshotgun works only in Berlin/Germany.' % (colored('Error', 'red'), colored(e, 'yellow')))
             return 1
